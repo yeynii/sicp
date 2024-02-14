@@ -30,4 +30,12 @@ console.log(double(double(double))(inc)(5))
 /* 1.42 */
 const compose = (f, g) => x => f(g(x))
 
+<<<<<<< HEAD
 console.log(compose(x => x ** 2, x => x + 1)(6))
+=======
+console.log(compose(x => x ** 2, x => x + 1)(6))
+
+const repeated = (f, n) => n > 1 ? repeated(compose(f, f), n - 1) : f;
+
+console.log(repeated(x => x ** 2, 2)(5))
+>>>>>>> ec8be99 (feat: 1.35, 1.40 ~ 1.42 풀이)
